@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var inputUsername : EditText
     private lateinit var inputPassword : EditText
     private lateinit var btnLogin : Button
+    private lateinit var btnRegister: Button
 
     private var userActual = ""
     private var passwordActual = ""
@@ -35,7 +36,16 @@ class MainActivity : AppCompatActivity() {
 
         //Llamada de las funciones
         initComponets()
-        initListener()
+
+        btnLogin.setOnClickListener {
+            validarLogin()
+        }
+
+        btnRegister.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     //Definion de las funciones
@@ -43,20 +53,20 @@ class MainActivity : AppCompatActivity() {
         inputUsername = findViewById(R.id.inputUser)
         inputPassword = findViewById(R.id.inputPassword)
         btnLogin = findViewById(R.id.btnLogin)
+        btnRegister = findViewById(R.id.btnRegister)
     }
 
-    private fun initListener() {
-        btnLogin.setOnClickListener {
+    private fun validarLogin() {
 
-            userActual = inputUsername.text.toString()
-            passwordActual = inputPassword.text.toString()
+        userActual = inputUsername.text.toString()
+        passwordActual = inputPassword.text.toString()
 
-            if (validarUsuario(userActual) && validarPassword(passwordActual)) {
+        if (validarUsuario(userActual) && validarPassword(passwordActual)) {
 
-                val intent = Intent(this, WelcomeActivity::class.java)
-                intent.putExtra("username", userActual)
-                startActivity(intent)
-            }
+            val intent = Intent(this, WelcomeActivity::class.java)
+            intent.putExtra("username", userActual)
+            startActivity(intent)
+
         }
     }
 
