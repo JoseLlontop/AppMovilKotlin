@@ -47,6 +47,8 @@
         android:hint="Nombre y Apellido"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
+        android:inputType="text"
+        android:maxLines="1"
 
         app:layout_constraintBottom_toTopOf="@id/etMail"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,6 +65,8 @@
         android:hint="Email"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
+        android:inputType="text"
+        android:maxLines="1"
 
         app:layout_constraintBottom_toTopOf="@+id/etPass"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,6 +85,8 @@
         android:hint="Contraseña"
         android:textColorHint="@color/white"
         android:textColor="@color/white"
+        android:inputType="textPassword"
+        android:maxLines="1"
 
         app:layout_constraintBottom_toTopOf="@+id/etPass2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -99,6 +105,8 @@
         android:hint="Confirmar Contraseña"
         android:textColorHint="@color/white"
         android:textColor="@color/white"
+        android:inputType="textPassword"
+        android:maxLines="1"
 
         app:layout_constraintBottom_toBottomOf="@+id/backgroundLogin"
         app:layout_constraintEnd_toEndOf="parent"
