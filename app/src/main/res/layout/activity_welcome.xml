@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212"
+    android:background="@color/colorFondoApp"
     android:padding="16dp"
     tools:context=".WelcomeActivity">
 
@@ -25,8 +25,8 @@
     <View
         android:id="@+id/backgroundPreferencia"
         android:layout_width="0dp"
-        android:layout_height="300dp"
-        android:background="#02332F"
+        android:layout_height="320dp"
+        android:background="@color/colorFondoInput"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.7"
@@ -46,14 +46,14 @@
 
         <RadioButton
             android:id="@+id/rbAndroid"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="Android"
             android:textColor="@color/white" />
 
         <RadioButton
             android:id="@+id/rbIOS"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="iOS"
             android:textColor="@color/white" />
@@ -64,11 +64,12 @@
         android:id="@+id/platformLogo"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        app:layout_constraintTop_toBottomOf="@+id/platformRadioGroup"
-        app:layout_constraintStart_toStartOf="parent"
+
+        android:contentDescription="Platform Logo"
+        app:layout_constraintBottom_toTopOf="@+id/backgroundPreferencia"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:contentDescription="Platform Logo" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/platformRadioGroup" />
 
     <!-- Selección de preferencias -->
     <TextView
@@ -91,7 +92,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Programación"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:textColor="@color/white"
+
         app:layout_constraintTop_toTopOf="@id/backgroundPreferencia"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,17 +107,22 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Redes"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:textColor="@color/white"
+
         app:layout_constraintTop_toBottomOf="@+id/cbProgramming"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/cbNetworks"/>
+        app:layout_constraintBottom_toTopOf="@+id/cbSecurity"/>
 
     <CheckBox
         android:id="@+id/cbSecurity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Seguridad"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/cbNetworks"
         app:layout_constraintBottom_toTopOf="@id/cbHardware"
@@ -125,6 +134,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Hardware"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/cbSecurity"
         app:layout_constraintBottom_toTopOf="@id/cbOther"
@@ -137,6 +148,8 @@
         android:layout_height="wrap_content"
         android:text="Otra"
         android:textColor="@color/white"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
 
         app:layout_constraintTop_toBottomOf="@+id/cbHardware"
         app:layout_constraintBottom_toBottomOf="@id/backgroundPreferencia"
@@ -166,7 +179,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:backgroundTint="#E53935"
+        android:backgroundTint="@color/colorBotonAceptar"
         android:text="Enviar"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
