@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorFondoApp">#121212</color>
+    <color name="colorBoton">#E53935</color>
+    <color name="colorBotonAceptar"> #40BC45</color>
+    <color name="colorFondoInput"> #02332F</color>
 </resources>
