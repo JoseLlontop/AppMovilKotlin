@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#121212"
+    android:background="@color/colorFondoApp"
     android:padding="16dp">
 
     <TextView
@@ -29,7 +29,7 @@
         android:id="@+id/backgroundLogin"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
-        android:background="#02332F"
+        android:background="@color/colorFondoInput"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,7 +87,7 @@
         android:layout_height="wrap_content"
         android:text="Iniciar sesion"
         android:textSize="15sp"
-        android:backgroundTint="#E53935"
+        android:backgroundTint="@color/colorBoton"
         android:textColor="@color/white"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,7 +104,7 @@
         android:layout_height="wrap_content"
         android:text="Registrarse"
         android:textSize="15sp"
-        android:backgroundTint="#E53935"
+        android:backgroundTint="@color/colorBoton"
         android:textColor="@color/white"
 
         app:layout_constraintBottom_toBottomOf="parent"
